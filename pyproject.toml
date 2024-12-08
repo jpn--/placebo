@@ -1,0 +1,23 @@
+[project]
+name = "placebo"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rich"
+]
+
+[build-system]
+requires = [
+    "setuptools>=69",
+]
+
+[project.scripts]
+placebo = "placebo.__main__:main"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "UP", "TID"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["placebo"]
+required-imports = ["from __future__ import annotations"]
